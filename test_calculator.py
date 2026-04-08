@@ -9,17 +9,17 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(2,5),7)
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(3,0),3)
-        self.assertEqual(sub(10,5),5)
-        self.assertEqual(sub(12,2),10)
+        self.assertEqual(subtract(3,0),3)
+        self.assertEqual(subtract(10,5),5)
+        self.assertEqual(subtract(12,2),10)
     ##########################
 
     ####### Partner 1
     def test_multiply(self): # 3 assertions
-        fill in code
+        self.assertEqual(multiply(3,5),15)
 
     def test_divide(self): # 3 assertions
-        fill in code
+        self.assertEqual(divide(6,1),6)
     ##########################
 
     ####### Partner 2
@@ -39,20 +39,20 @@ class TestCalculator(unittest.TestCase):
     ####### Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
-        # with self.assertRaises(<INSERT_ERROR_TYPE>):
-        #     logarithm(0, 5)
-        fill in code
+        self.assertRaises(logarithm(6,0), ValueError())
+
 
     def test_hypotenuse(self): # 3 assertions
-        fill in code
+        self.assertEqual(hypotenuse(3,4),5)
+        self.assertEqual(hypotenuse(5, 12), 13)
+        self.assertEqual(hypotenuse(6, 8), 10)
+
 
     def test_sqrt(self): # 3 assertions
         # Test for invalid argument, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
-        #    square_root(NUM)
-        # Test basic function
-        fill in code
-    #########################
+        self.assertRaises(square_root(-1), ValueError())
+
 
 # Do not touch this
 if __name__ == "__main__":
