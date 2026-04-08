@@ -35,3 +35,4 @@ def logarithm(a, b):
     return math.log(a, b)
 def exponent(a, b):
     return a ** b
+print()
